@@ -2,30 +2,38 @@
 import ImageCard from "./ImageCard.astro";
 const offers = [
     {
-        imageURL:"dumbbells.jpg",
-        offerText:"Tour Our Gym"
+        imageURL: "tyre-fitting-and-sales.png.webp",
+        offerText: "Tyre Sales and Installation",
+        info: "Tyre Sales and Installation: Offering a wide range of tyre brands and sizes, with professional installation to ensure proper fit and performance.",
     },
     {
-        imageURL:"rowing.jpg",
-        offerText:"Check out our Group Classes"
+        imageURL: "TYRE-ALIGNMENT-TYRE-TRACKING.png.webp",
+        offerText: "Tyre Balancing and Wheel Alignment",
+        info: "Tyre Balancing and Wheel Alignment: Ensuring tyres wear evenly and improve vehicle handling, fuel efficiency, and safety.",
     },
     {
-        imageURL:"skipping.jpg",
-        offerText:"Ask about Personal Training"
-    }
-]
+        imageURL: "puncture-repairs-edenderry.png.webp",
+        offerText: "Repairs and Maintenance",
+        info: "Tyre Repairs and Maintenance: Services like puncture repairs, rotation, and tread inspections to extend tyre life and maintain optimal driving conditions.",
+    },
+];
 ---
 
-
 <section class="py-12 text-center">
-<h1 class="yellowText text-5xl italic uppercase">What we offer</h1>
-<p class="text-white">We're committed to bringing you the best workout experience</p>
-<div class="grid grid-cols-1 md:grid-cols-3">
-{
-    offers.map((offer)=>(
-        <ImageCard imageURL={offer.imageURL} text={offer.offerText} />
-    ))
-}
-
-</div>
+    <h1 class="yellowText text-5xl italic uppercase">What we offer</h1>
+    <p class="text-white">
+        We're committed to deliver top-tier tyres and exceptional service that
+        keep you safe and satisfied
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3">
+        {
+            offers.map((offer) => (
+                <ImageCard
+                    imageURL={offer.imageURL}
+                    text={offer.offerText}
+                    details={offer.info}
+                />
+            ))
+        }
+    </div>
 </section>

@@ -1,0 +1,25 @@
+---
+---
+<section class="flex flex-col h-[90%] w-[95%] mb-10 ">
+  <h1 class="yellowText mb-10 text-4xl uppercase">Enquiry Form</h1>
+  <form method="POST" class="yellowBG flex flex-col w-full gap-12 p-12">
+    <label class="text-xl flex flex-col md:flex-row md:gap-36">
+      Name:
+      <input type="text" name="name" required class="h-14 w-[115%] max-w-lg" placeholder="Name"/>
+    </label>
+    <label class="text-xl flex flex-col md:flex-row md:gap-36">
+      Email:
+      <input type="email" name="email" required class="h-14 w-[115%] max-w-lg" placeholder="your@address.com"/>
+    </label>
+    <label class="text-xl flex flex-col md:flex-row md:gap-14">
+      Phone Number:
+      <input type="text" name="phone-number" required class="h-14 w-[115%] max-w-lg" placeholder="+263 772 288 018"/>
+
+    </label>
+    <label class="flex flex-col text-xl md:flex-row md:gap-28">
+      Message:
+      <textarea name="message" required minlength="6" class="h-28 w-[115%] max-w-lg" placeholder="your message....."></textarea>
+    </label>
+    <button class="bg-black text-white py-3 px-6 w-64">Send</button>
+  </form>
+</section>

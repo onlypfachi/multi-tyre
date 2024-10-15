@@ -1,20 +1,29 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import About from '../components/About.astro';
-import Offers from '../components/Offers.astro';
-import Testimonials from '../components/Testimonials.astro';
-import HeroFooter from '../components/HeroFooter.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Offers from "../components/Offers.astro";
+import TopOffers from "../components/TopOffers.astro";
+import HeroFooter from "../components/HeroFooter.astro";
 ---
 
-<Layout title="Astraeus Gym">
-	<main>
-		<!-- Add Call To action, company Name and Button text2 -->
-	<Hero callToAction='Be Your Best', buttonText='Join Today' companyName='Astraeus Gym'/>
-	<About linkText="/" imageOne='gym-instructor.jpg', imageTwo='gym-femaleinstructor.jpg' />
-	<Offers />
-	<Testimonials />
-	<HeroFooter callToAction='Get in Touch Today' />
-	</main>
+<Layout title="Multi Tyre Company" >
+<main class="min-w-[34rem]">
+        <!-- Add Call To action, company Name and Button text2 -->
+        <Hero
+            callToAction="Multi Tyre Company"
+            ,
+            buttonText="askme@multityre.co.zw"
+            companyName="Multi Tyre Company Zimbabwe"
+        />
+        <About
+            linkText="/"
+            imageOne="trye-details.jpeg"
+            ,
+            imageTwo="TireDetail.webp"
+        />
+        <Offers />
+        <TopOffers />
+        <HeroFooter callToAction="Get in Touch Today" />
+    </main>
 </Layout>
-

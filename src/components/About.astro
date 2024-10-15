@@ -1,33 +1,32 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
+import EnquiryForm from "./EnquiryForm.astro";
 
 interface Props {
-  linkText: string;
-  imageOne:string;
-  imageTwo:string;
+    linkText: string;
+    imageOne: string;
+    imageTwo: string;
 }
 const { linkText, imageOne, imageTwo } = Astro.props;
 ---
 
-<section class="py-12">
-  <div class="grid grid-cols-2 p-4">
-    <div>
-      <h1 class="text-white text-5xl italic max-w-xs yellowText pb-8">About Our Fit Family</h1>
-      <p class="text-white max-w-sm">
-        Astraeus was founded in 2001 by a husband and wife team, Bobby and Dora Graff. Since then, we have expanded to over 115 locations nationwide!
-      </p>
-      <p class="text-white mt-8 underline">
-        <a href={linkText}>Learn more</a>
-      </p>
+<section class="py-12  min-w-[24rem]">
+    <div class="sm:grid lg:grid-cols-2 p-4 min-w-[24rem]">
+        <div>
+            <h1 class="text-white text-5xl italic max-w-xs yellowText pb-8">
+                About Our Tyre Family
+            </h1>
+            <p class="text-white max-w-sm">
+                Multi Tyre was founded with a simple yet powerful mission: to
+                provide reliable, high-quality tyres that keep people safe on
+                the road. Driven by a passion for excellence and customer
+                service, ensuring drivers everywhere stay confident on their
+                journeys.
+            </p>
+            <p class="text-white mt-8 underline">
+                <a href={linkText}>Learn more</a>
+            </p>
+        </div>
+        <EnquiryForm/>
     </div>
-    <div class="grid grid-cols-2">
-        <Image src={'/images/'+imageOne} 
-        width={600} 
-        height={600/1.5} 
-        alt="Gym Instructor" 
-        class="rounded-md object-cover w-48"/>
-        <Image src={'/images/'+imageTwo}
-         width={600} height={600/1.5} alt="Boxing Instructor" class="rounded-md object-cover w-48 pt-8"/>
-    </div>
-  </div>
 </section>

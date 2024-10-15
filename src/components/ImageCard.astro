@@ -1,17 +1,27 @@
 ---
 interface Props {
-  text: string;
-  imageURL: string;
+    text: string;
+    imageURL: string;
+    details: string;
 }
-const { text = "", imageURL = "" } = Astro.props;
+const { text = "", imageURL = "", details = "" } = Astro.props;
 const imageStyle = {
-  backgroundImage: `url(/images/${imageURL})`,
+    backgroundImage: `url(/images/${imageURL})`,
 };
 ---
 
 <div
-  class="py-48 bg-cover m-8 bg-gray-700 bg-blend-multiply"
-  style={imageStyle}
+    class="py-48 bg-cover m-8 bg-gray-700 bg-blend-multiply relative group"
+    style={imageStyle}
 >
-  <h2 class="text-white uppercase text-4xl italic">{text}</h2>
+    <h2
+        class="text-white uppercase text-4xl italic transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+    >
+        {text}
+    </h2>
+    <p
+        class="text-white text-xl transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+    >
+        {details}
+    </p>
 </div>
